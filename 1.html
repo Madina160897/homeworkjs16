@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <span>Enter your name (name can't contain digits):</span> <br>
+    <input type="text" placeholder="Brendan Eich" class="a" oninput="fn('item')">
+
+</body>
+
+<script>
+
+    let a = document.querySelector(".a");
+
+
+    function fn(item) {
+        let b = a.value.replace(/\d/g, "")
+
+        a.value = b
+        console.log(b)
+    }
+    fn()
+
+    function cl() {
+        alert()
+    }
+    fn()
+
+</script>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 10%;
+        }
+
+        .all {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fon {
+            width: 800px;
+            height: 300px;
+            border: 5px solid gray;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .traffic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+
+        .next {
+            width: 250px;
+            height: 300px;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: rgb(175, 175, 175);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+            box-shadow: 5px 5px gray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+
+        <div class="fon">
+            <div class="traffic"></div>
+            <div class="traffic"></div>
+            <div class="traffic"></div>
+        </div>
+
+        <button class="next" onclick="trafficLight()"> NEXT</button>
+
+    </div>
+
+</body>
+
+<script>
+
+    let traffic = document.querySelectorAll(".traffic")
+
+    let i = -1;
+
+    function trafficLight() {
+        i++
+
+        if (i === 0) {
+            traffic[0].style.background = "red"
+            traffic[1].style.background = "grey"
+            traffic[2].style.background = "grey"
+        } else if (i === 1) {
+            traffic[0].style.background = "grey"
+            traffic[1].style.background = "yellow"
+            traffic[2].style.background = "grey"
+        } else if (i === 2) {
+            traffic[0].style.background = "grey"
+            traffic[1].style.background = "grey"
+            traffic[2].style.background = "green"
+        }
+        if (i >= 2) {
+            i = -1
+        }
+    }
+
+</script>
+
+</html>

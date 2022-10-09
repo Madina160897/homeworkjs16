@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 5%;
+        }
+
+        .all {
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        button {
+            text-decoration: none;
+            transition: 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background: white;
+        }
+
+        .tooltip {
+            position: absolute;
+            border: 1px solid black;
+            color: black;
+            display: block;
+            width: 80px;
+            top: 50px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div>
+            <div class="tooltip">Tool tip 1</div>
+            <button class="but">Button 1</button>
+        </div>
+
+        <div>
+            <button class="but">Button 2</button>
+            <div class="tooltip">Tool tip 2</div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script>
+
+    var a = document.getElementsByClassName("but");
+    for (let i = 0; i < a.length; i++) {
+        a[i].onmouseover = function () {
+            let tooltip = document.getElementsByClassName("tooltip");
+            let too = tooltip[i];
+            too.style.opacity = "1";
+            too.style.visibility = "visible";
+            console.log(too)
+        }
+        a[i].onmouseout = function () {
+            let tooltip = document.getElementsByClassName("tooltip");
+            let too = tooltip[i];
+            too.style.opacity = "0";
+            too.style.visibility = "hidden";
+            console.log(too)
+        }
+    }
+
+</script>
+
+</html>

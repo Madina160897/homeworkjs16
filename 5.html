@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li onclick="setSelected(0)">"JavaScript for Kids: A Playful Introduction to Programming" by Nicck Morgan</li>
+        <li onclick="setSelected(1)">"Eloquent JavaScript: A Modern Introduction to Programming" by Marijin Haverbeke
+        </li>
+        <li onclick="setSelected(2)">"JavaScript: The Good Parts" by Douglas Crockford</li>
+        <li onclick="setSelected(3)">"Programming JavaScript Applications: Robust Web Architrcture with Node, HTML5, and
+            Moderns JS Libraries" by
+            Eric Elliott</li>
+        <li onclick="setSelected(4)">"Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript" by
+            David Herman</li>
+        <li onclick="setSelected(5)">"JavaScript: The Definitive Guide" by David Flanagan</li>
+        <li onclick="setSelected(6)">"You Don't Know JS" by Kyle Simpson</li>
+    </ol>
+</body>
+
+<script>
+
+    let all = document.querySelectorAll("li")
+
+    let j = 0
+    function setSelected(i) {
+        if (all[j].style.backgroundColor === "coral") {
+            all[j].style.backgroundColor = "white"
+        }
+        all[i].style.backgroundColor = "coral"
+        j = i
+    }
+
+</script>
+
+</html>
